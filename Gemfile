@@ -58,3 +58,4 @@ end
 
 
 gem 'faker', '~> 2.23'
+gem "annotate", "~> 3.2"
