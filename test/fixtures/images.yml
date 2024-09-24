@@ -9,7 +9,7 @@
 #
 
 one:
-  url_image: MyString
+  url_image: string
 
 two:
-  url_image: MyString
+  url_image: string
