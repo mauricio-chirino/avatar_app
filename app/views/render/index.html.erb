@@ -1,2 +1,3 @@
-<h1>Render#index</h1>
-<p>Find me in app/views/render/index.html.erb</p>
+<% @avatars.each do |a| %>
+  <%= image_tag(url_for(a.url_image)) %>
+<% end %>

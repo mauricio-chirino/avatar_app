@@ -4,10 +4,5 @@
 
 
 <% @avatars.each do |a| %>
-  <%
-=begin%>
- <%= image_tag a.url_image %> 
-<%
-=end%>
-<%= image_tag(url_for(a.url_image)) %>
+  <%= image_tag(url_for(a.url_image)) %>
 <% end %>
