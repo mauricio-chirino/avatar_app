@@ -14,7 +14,7 @@ services:
     startCommand: "bundle exec rails server"
     envVars:
       - key: DATABASE_URL
-        value: postgres://chima:Aldus1024@/avatar_app_development
+        value: postgres://chima:Aldus1024@65.21.82.122/avatar_app_development
       - key: RAILS_MASTER_KEY
         sync: false
       - key: WEB_CONCURRENCY
