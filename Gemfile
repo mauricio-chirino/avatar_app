@@ -57,5 +57,5 @@ group :test do
 end
 
 
-gem "faker", "~> 2.23"
+gem "faker", "~> 3.4"
 gem "annotate", "~> 3.2"
