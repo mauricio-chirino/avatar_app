@@ -1,23 +1,23 @@
 databases:
-  - name: avatar_app_production
-    databaseName: avatar_app_production
-    user: chima
-    password: Aldus1024@
+  - name: mysite
+    databaseName: mysite
+    user: mysite
     plan: free
 
 services:
   - type: web
-    name: avatar
+    name: mysite
     runtime: ruby
     plan: free
-    buildCommand: "./bin/render-build.sh && bundle exec rails assets:precompile"
-    startCommand: "bundle exec rails server -e production"
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "bundle exec rails server"
     envVars:
       - key: DATABASE_URL
-        value: postgres://chima:Aldus1024@65.21.82.122/avatar_app_production
+        fromDatabase:
+          name: mysite
+          property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-      - key: RAILS_ENV
-        value: production
       - key: WEB_CONCURRENCY
-        value: 2
+        value: 2 # sensible default
